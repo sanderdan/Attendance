@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ejb-jar" name="attendance-ejb:ejb">
-    <output-path>$PROJECT_DIR$/attendance-ejb/target</output-path>
-    <root id="archive" name="attendance-ejb.jar">
-      <element id="artifact" artifact-name="attendance-ejb:ejb exploded" />
-    </root>
-  </artifact>
-</component>

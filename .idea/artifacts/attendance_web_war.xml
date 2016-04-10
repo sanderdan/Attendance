@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="attendance-web:war">
-    <output-path>$PROJECT_DIR$/attendance-web/target</output-path>
-    <root id="archive" name="attendance-web.war">
-      <element id="artifact" artifact-name="attendance-web:war exploded" />
-    </root>
-  </artifact>
-</component>
