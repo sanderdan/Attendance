@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/attendance.iml" filepath="$PROJECT_DIR$/attendance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/attendance-ear/attendance-ear.iml" filepath="$PROJECT_DIR$/attendance-ear/attendance-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/attendance-ejb/attendance-ejb.iml" filepath="$PROJECT_DIR$/attendance-ejb/attendance-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/attendance-web/attendance-web.iml" filepath="$PROJECT_DIR$/attendance-web/attendance-web.iml" />
+    </modules>
+  </component>
+</project>

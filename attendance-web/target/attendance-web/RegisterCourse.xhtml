@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="template.xhtml">
+    <ui:define name="content">
+        <div class="container">
+
+            <h:form>
+                <h:commandButton
+                        styleClass="btn-floating right-align btn-large orange"
+                        value="back"
+                        action="index"/>
+            </h:form>
+
+            <h2>Add Course </h2>
+
+
+            <h:form>
+                <div class="row">
+                    <div class="input-field col s12 l4">
+                        <h:outputLabel styleClass="white-text active" value="Course name: "/>
+                        <h:inputText id="courseName" value="#{courseBean.course.courseName}"/>
+                        <h:message id="courseNameErrorMessage" styleClass="messageError" for="courseName"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 l4">
+                        <h:outputLabel styleClass="white-text active" value="Course max students: "/>
+                        <h:inputText id="maxStudents" value="#{courseBean.course.maxStudents}"/>
+                        <h:message id="maxStudentsErrorMessage" styleClass="messageError" for="maxStudents"/>
+                    </div>
+                    <div class="input-field col s12 l4">
+                        <h:outputLabel styleClass="white-text active" value="Teacher: "/>
+                        <h:inputText id="teacherName" value="#{courseBean.course.teacher}"/>
+                        <h:message id="teacherNameErrorMessage" styleClass="messageError" for="teacherName"/>
+                    </div>
+                </div>
+
+                <h:commandButton styleClass="btn-large blue right-align"
+                                 value="Add"
+                                 action="#{courseBean.addCourse}"/>
+            </h:form>
+
+            <div class="row">
+                <div class="s12"/>
+            </div>
+
+            <h:dataTable styleClass="responsive-table green darken-2 z-depth-1-half" value="#{courseBean.courses}" var="c">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Course id"/>
+                    </f:facet>
+                    <h:outputText value="#{c.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Course name"/>
+                    </f:facet>
+                    <h:outputText value="#{c.courseName}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Teacher"/>
+                    </f:facet>
+                    <h:outputText value="#{c.teacher}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Max students"/>
+                    </f:facet>
+                    <h:outputText value="#{c.maxStudents}"/>
+                </h:column>
+            </h:dataTable>
+
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="template.xhtml">
+    <ui:define name="content">
+        <div class="container">
+            <h:form>
+                <h:commandButton
+                        styleClass="btn-floating btn-large orange right-align"
+                        value="back"
+                        action="index"/>
+            </h:form>
+
+            <h2>Edit student</h2>
+
+            <h:form>
+                <div>
+                    <h:selectOneMenu styleClass="col s12 l5" value="#{studentBean.selectedStudent}"
+                                     converter="omnifaces.SelectItemsConverter">
+                        <f:selectItem itemLabel="Choose Student to Edit.." noSelectionOption="true"/>
+                        <f:selectItems value="#{studentBean.students}" var="student" itemValue="#{student}"
+                                       itemLabel="#{student.firstName}"/>
+                        <f:ajax render="selected_student_firstName"/>
+                        <f:ajax render="selected_student_lastName"/>
+                        <f:ajax render="selected_student_phoneNumber"/>
+                        <f:ajax render="selected_student_email"/>
+                    </h:selectOneMenu>
+
+                    <!-- TODO: Fix validation for input-->
+                    <div class="row">
+                        <div class="input-field col s4 l4">
+                            <!--<i class="material-icons prefix white-text">account_circle</i>-->
+                            <h:outputLabel styleClass="active white-text" value="First Name: "/>
+                            <h:inputText id="selected_student_firstName"
+                                         value="#{studentBean.selectedStudent.firstName}"/>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <h:outputLabel styleClass="active white-text" value="Last Name: "/>
+                            <h:inputText id="selected_student_lastName"
+                                         value="#{studentBean.selectedStudent.lastName}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <h:outputLabel styleClass="active white-text" value="Phone Number: "/>
+                            <h:inputText id="selected_student_phoneNumber"
+                                         value="#{studentBean.selectedStudent.phoneNumber}"/>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <h:outputLabel styleClass="active white-text" value="Email: "/>
+                            <h:inputText id="selected_student_email" value="#{studentBean.selectedStudent.email}">
+                                <f:ajax event="blur" render="errorMessage"/>
+                            </h:inputText>
+                            <h:message id="errorMessage" styleClass="errorMessage" for="selected_student_email"/>
+                        </div>
+                    </div>
+
+
+                    <h:commandButton styleClass="btn-large right-align"
+                                     value="Save changes"
+                                     action="#{studentBean.editStudent(studentBean.selectedStudent)}"/>
+
+                </div>
+            </h:form>
+
+
+            <div class="row">
+                <div class="s12"/>
+            </div>
+
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

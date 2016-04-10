@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="attendance-ear:ear">
+    <output-path>$PROJECT_DIR$/attendance-ear/target</output-path>
+    <root id="archive" name="attendance-ear.ear">
+      <element id="artifact" artifact-name="attendance-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>
