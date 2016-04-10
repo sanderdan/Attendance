@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1342095833">
-    <data-source source="LOCAL" name="MySQL - attendanceDb@localhost" uuid="063ecf64-0c76-4739-86fe-10b9e665c238">
+  <component name="DataSourceManagerImpl" format="xml" hash="3468719812">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="063ecf64-0c76-4739-86fe-10b9e665c238">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/attendanceDb</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

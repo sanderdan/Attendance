@@ -4,9 +4,8 @@
     <root id="root">
       <element id="javaee-facet-resources" facet="attendance-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/attendance-ear/target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/attendance-ear/target/attendance-ear/META-INF/MANIFEST.MF" />
       </element>
-      <element id="dir-copy" path="$PROJECT_DIR$/attendance-ear/src/main/application" />
       <element id="archive" name="attendance-web.war">
         <element id="artifact" artifact-name="attendance-web:war exploded" />
       </element>
